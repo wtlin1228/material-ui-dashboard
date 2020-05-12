@@ -1,29 +1,40 @@
-import React from 'react';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-import PeopleIcon from '@material-ui/icons/People';
-import BarChartIcon from '@material-ui/icons/BarChart';
-import LayersIcon from '@material-ui/icons/Layers';
-import AssignmentIcon from '@material-ui/icons/Assignment';
+import React from 'react'
+import { Link } from '@reach/router'
+import { styled } from '@material-ui/core/styles'
+import ListItem from '@material-ui/core/ListItem'
+import ListItemIcon from '@material-ui/core/ListItemIcon'
+import ListItemText from '@material-ui/core/ListItemText'
+import ListSubheader from '@material-ui/core/ListSubheader'
+import DashboardIcon from '@material-ui/icons/Dashboard'
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart'
+import PeopleIcon from '@material-ui/icons/People'
+import BarChartIcon from '@material-ui/icons/BarChart'
+import LayersIcon from '@material-ui/icons/Layers'
+import AssignmentIcon from '@material-ui/icons/Assignment'
+
+const MyLink = styled(Link)({
+  color: 'inherit',
+  textDecoration: 'none',
+})
 
 export const mainListItems = (
   <div>
-    <ListItem button>
-      <ListItemIcon>
-        <DashboardIcon />
-      </ListItemIcon>
-      <ListItemText primary="Dashboard" />
-    </ListItem>
-    <ListItem button>
-      <ListItemIcon>
-        <ShoppingCartIcon />
-      </ListItemIcon>
-      <ListItemText primary="Orders" />
-    </ListItem>
+    <MyLink to="/dashboard">
+      <ListItem button>
+        <ListItemIcon>
+          <DashboardIcon />
+        </ListItemIcon>
+        <ListItemText primary="Dashboard" />
+      </ListItem>
+    </MyLink>
+    <MyLink to="/orders">
+      <ListItem button>
+        <ListItemIcon>
+          <ShoppingCartIcon />
+        </ListItemIcon>
+        <ListItemText primary="Orders" />
+      </ListItem>
+    </MyLink>
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
@@ -43,7 +54,7 @@ export const mainListItems = (
       <ListItemText primary="Integrations" />
     </ListItem>
   </div>
-);
+)
 
 export const secondaryListItems = (
   <div>
@@ -67,4 +78,4 @@ export const secondaryListItems = (
       <ListItemText primary="Year-end sale" />
     </ListItem>
   </div>
-);
+)
