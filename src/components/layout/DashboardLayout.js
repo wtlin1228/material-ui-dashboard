@@ -5,7 +5,7 @@ import Box from '@material-ui/core/Box'
 
 import useAppBar from './hooks/useAppBar'
 import MyDrawer from './MyDrawer'
-import Copyright from '../Copyright'
+import Copyright from 'components/Copyright'
 
 const useStyles = makeStyles(theme => ({
   root: {

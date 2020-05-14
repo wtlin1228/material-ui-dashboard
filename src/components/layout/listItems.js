@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link } from '@reach/router'
-import { styled } from '@material-ui/core/styles'
 import ListItem from '@material-ui/core/ListItem'
 import ListItemIcon from '@material-ui/core/ListItemIcon'
 import ListItemText from '@material-ui/core/ListItemText'
@@ -12,29 +10,26 @@ import BarChartIcon from '@material-ui/icons/BarChart'
 import LayersIcon from '@material-ui/icons/Layers'
 import AssignmentIcon from '@material-ui/icons/Assignment'
 
-const MyLink = styled(Link)({
-  color: 'inherit',
-  textDecoration: 'none',
-})
+import Link from 'components/Link'
 
 export const mainListItems = (
   <div>
-    <MyLink to="/dashboard">
+    <Link to="/dashboard">
       <ListItem button>
         <ListItemIcon>
           <DashboardIcon />
         </ListItemIcon>
         <ListItemText primary="Dashboard" />
       </ListItem>
-    </MyLink>
-    <MyLink to="/orders">
+    </Link>
+    <Link to="/orders">
       <ListItem button>
         <ListItemIcon>
           <ShoppingCartIcon />
         </ListItemIcon>
         <ListItemText primary="Orders" />
       </ListItem>
-    </MyLink>
+    </Link>
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
